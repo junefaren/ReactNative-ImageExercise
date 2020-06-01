@@ -9,12 +9,12 @@ const StartGameScreen = (props) => {
       <View style={styles.input}>
         <Text>Kies een bot</Text>
         <TextInput />
-        <View styles={styles.buttons}>
+        <View style={styles.buttons}>
           <View style={styles.button}>
-            <Button title="Reset" />
+            <Button title="Reset" color="#c717fc" />
           </View>
           <View style={styles.button}>
-            <Button title="Confirm" />
+            <Button title="Confirm" color="#f7287b" />
           </View>
         </View>
       </View>
@@ -43,6 +43,9 @@ const styles = StyleSheet.create({
     width: 300,
     maxWidth: "80%",
     alignItems: "center",
+  },
+  button: {
+    width: 100,
   },
 });
 
