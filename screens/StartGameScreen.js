@@ -6,6 +6,13 @@ import Colors from "../constants/colors";
 import Input from "../components/Input";
 
 const StartGameScreen = (props) => {
+const [enteredValue, setEnteredValue] = useState("")
+const numberInputHandler = inputText => {
+    setEnteredValue(inputText)
+}
+
+}
+
   <View style={styles.screen}>
     <Text style={styles.title}>De Botten</Text>
     <Card style={styles.input}>
@@ -16,8 +23,10 @@ const StartGameScreen = (props) => {
           blurOnSubmit
           autoCapitalize="none"
           autoCorrect={false}
-          keyBoardType="numeric"
+          keyboardType="number-pad"
           maxLength={2}
+          onChangeText={numberInputHandler}
+          value={enteredValue }
         />
         <View style={styles.buttons}>
           <View style={styles.button}>
