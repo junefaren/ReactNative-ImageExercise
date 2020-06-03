@@ -11,7 +11,7 @@ const StartGameScreen = (props) => {
     <Card style={styles.input}>
       <View style={styles.input}>
         <Text>Kies een bot</Text>
-        <TextInput />
+        <Input style={styles.inputInput} />
         <View style={styles.buttons}>
           <View style={styles.button}>
             <Button title="Reset" color={Colors.accent} />
@@ -46,6 +46,10 @@ const styles = StyleSheet.create({
     width: 300,
     maxWidth: "80%",
     alignItems: "center",
+  },
+  inputInput: {
+    width: 30,
+    textAlign: "center",
   },
   button: {
     width: 100,
