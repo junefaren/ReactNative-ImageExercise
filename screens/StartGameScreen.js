@@ -11,7 +11,14 @@ const StartGameScreen = (props) => {
     <Card style={styles.input}>
       <View style={styles.input}>
         <Text>Kies een bot</Text>
-        <Input style={styles.inputInput} />
+        <Input
+          style={styles.inputInput}
+          blurOnSubmit
+          autoCapitalize="none"
+          autoCorrect={false}
+          keyBoardType="numeric"
+          maxLength={2}
+        />
         <View style={styles.buttons}>
           <View style={styles.button}>
             <Button title="Reset" color={Colors.accent} />
