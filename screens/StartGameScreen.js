@@ -27,8 +27,13 @@ const confirmInputHandler = () => {
     setConfirmed(true)
     setEnteredValue('')
     setSelectedNumber(chosenNumber)
-
 }
+
+let confirmedOutput
+if (confirmed) {
+confirmedOutput = <Text>chosenNumber:{selectedNumber}</Text>
+}
+
 <TouchableWithoutFeedback onPress={()=> {
 Keyboard.dismiss()
 }}/>
@@ -57,8 +62,9 @@ Keyboard.dismiss()
         </View>
       </View>
     </Card>
-  </View>;
-};
+    {confirmedOutput}
+  </View>
+}
 
 const styles = StyleSheet.create({
   screen: {
