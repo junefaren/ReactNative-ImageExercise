@@ -6,11 +6,15 @@ import Colors from "../constants/colors";
 import Input from "../components/Input";
 
 const StartGameScreen = (props) => {
-const [enteredValue, setEnteredValue] = useState("")
-const numberInputHandler = inputText => {
+
+    const [enteredValue, setEnteredValue] = useState("")
+
+    const numberInputHandler = inputText => {
     setEnteredValue(inputText.replace(/[^09]/g, ''))
 }
 
+const resetInputHandler = () => {
+    
 }
 <TouchableWithoutFeedback onPress={()=> {
 Keyboard.dismiss()
