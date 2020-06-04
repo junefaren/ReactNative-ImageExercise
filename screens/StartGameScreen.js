@@ -20,8 +20,13 @@ const resetInputHandler = () => {
 }
 
 const confirmInputHandler = () => {
+    const chosenNumber = parseInt(enteredValue)
+    if (chosenNumber === NaN || chosennumber <= 0 || chosenNumber >= 99){
+        return;
+    }
     setConfirmed(true)
     setEnteredValue('')
+    setSelectedNumber(parseInt(enteredValue))
 
 }
 <TouchableWithoutFeedback onPress={()=> {
