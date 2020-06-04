@@ -8,13 +8,21 @@ import Input from "../components/Input";
 const StartGameScreen = (props) => {
 
     const [enteredValue, setEnteredValue] = useState("")
+    const [confirmed, setConfirmed] = useState(false)
 
     const numberInputHandler = inputText => {
     setEnteredValue(inputText.replace(/[^09]/g, ''))
 }
 
 const resetInputHandler = () => {
-    
+    setEnteredValue('')
+    setConfirmed(false)
+}
+
+const confirmInputHandler = () => {
+    setConfirmed(true)
+    setEnteredValue('')
+
 }
 <TouchableWithoutFeedback onPress={()=> {
 Keyboard.dismiss()
@@ -36,7 +44,7 @@ Keyboard.dismiss()
         />
         <View style={styles.buttons}>
           <View style={styles.button}>
-            <Button title="Reset" color={Colors.accent} />
+            <Button title="Reset" color={Colors.accent} onPress={resetInputHandler} />
           </View>
           <View style={styles.button}>
             <Button title="Confirm" color={Colors.primary} />
