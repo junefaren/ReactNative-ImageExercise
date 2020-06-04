@@ -26,7 +26,7 @@ const confirmInputHandler = () => {
     }
     setConfirmed(true)
     setEnteredValue('')
-    setSelectedNumber(parseInt(enteredValue))
+    setSelectedNumber(chosenNumber)
 
 }
 <TouchableWithoutFeedback onPress={()=> {
@@ -52,7 +52,7 @@ Keyboard.dismiss()
             <Button title="Reset" color={Colors.accent} onPress={resetInputHandler} />
           </View>
           <View style={styles.button}>
-            <Button title="Confirm" color={Colors.primary} />
+            <Button title="Confirm" color={Colors.primary} onPress={confirmInputHandler}/>
           </View>
         </View>
       </View>
