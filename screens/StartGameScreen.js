@@ -22,7 +22,7 @@ const resetInputHandler = () => {
 
 const confirmInputHandler = () => {
     const chosenNumber = parseInt(enteredValue)
-    if (chosenNumber === NaN || chosennumber <= 0 || chosenNumber >= 99){
+    if ( isNaN(chosenNumber) || chosennumber <= 0 || chosenNumber >= 99){
       Alert.alert('Invalid number', 'Number has to be a number between 1 and 99', [{text: 'oke', style: 'destructive', onPress: resetInputHandler}])
         return;
     }
@@ -33,7 +33,11 @@ const confirmInputHandler = () => {
 
 let confirmedOutput
 if (confirmed) {
-confirmedOutput = <Text>chosenNumber:{selectedNumber}</Text>
+confirmedOutput = ( <Card style={styles.summaryContainer}>
+  <Text>You Selected</Text>
+  
+ 
+  </Card>)
 }
 
 <TouchableWithoutFeedback onPress={()=> {
@@ -97,6 +101,9 @@ const styles = StyleSheet.create({
   button: {
     width: 100,
   },
+  summaryContainer: {
+    marginTop: 20
+  }
 });
 
 export default StartGameScreen;
