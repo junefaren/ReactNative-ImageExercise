@@ -3,8 +3,8 @@ import { View, Text, StyleSheet, Alert } from "react-native";
 import Colors from "..constants/colors";
 
 const NumberContainer = (props) => {
-  <View>
-    <Text>{props.children}</Text>
+  <View style={styles.container}>
+    <Text style={styles.number}>{props.children}</Text>
   </View>;
 };
 
@@ -17,6 +17,10 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     alignItems: "center",
     justifyContent: "center",
+  },
+  number: {
+    color: Colors.accent,
+    fontSize: 22,
   },
 });
 
